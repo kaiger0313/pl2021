@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Internal</title>
+  </head>
+  <body>
+    <h1>Javascript Internal</h1>
+    <button class="btn">button1</button>
+    <button class="btn">button2</button>
+    <button class="btn">button3</button>
+    <script>
+      document.querySelectorAll('.btn').forEach((item) => {
+        item.addEventListener('click', (e) => {
+          alert(`${e.target.innerText} Clicked`);
+        });
+      });
+    </script>
+  </body>
+</html>
