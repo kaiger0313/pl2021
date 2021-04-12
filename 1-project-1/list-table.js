@@ -4,7 +4,7 @@ let contactList = RANDOM_USERS.results.map((user) => {
   const phone = user.phone
   return { name, email, phone }
 })
-console.log(contactList)
+console.log(JSON.stringify(contactList))
 
 const tbody = document.querySelector('#contact-table-body')
 const tbodyText = contactList
