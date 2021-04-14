@@ -31,6 +31,7 @@ function update(keyObj, valueObj) {
   if (!updMember) return
   const newDB = CONTACT_DB.filter((row) => row.name !== keyObj.name)
   updMember = { ...updMember, ...valueObj }
+  console.log(updMember)
   CONTACT_DB = [...newDB, updMember]
 }
 
@@ -58,17 +59,21 @@ function listConsole() {
 contactList.forEach((row) => {
   create(row)
 })
-
+console.log("After Initial Create")
+listConsole()
 create({ name: "cskim", email: "cskim@hufs.ac.kr", phone: "031-330-4365" })
 create({ name: "cskim", email: "cskim@hufs-gsuite.kr", phone: "010-111-1234" })
+console.log("After add 2 cskim ")
 listConsole()
 
 read({ name: "cskim" })
 
-update({ name: "cskim" }, { phone: "010-111-1234" })
+update({ name: "cskim" }, { phone: "010-555-5555" })
+console.log("After Update cskim")
 listConsole()
 
 remove({ name: "cskim" })
+console.log("After Remove cskim")
 listConsole()
 
 list()
