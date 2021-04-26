@@ -15,6 +15,7 @@
 - Live Server
 - Preview on Web Server
 - Prettier - Code formatter
+- Highlight Matching Tag
 
 ```
 "editor.formatOnPaste": true,
