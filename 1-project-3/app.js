@@ -1,4 +1,4 @@
-// Project 2 -- Use Local Storage(localStore)
+// Project 3 -- Use Class
 function listConsole(phoneBook) {
   phoneBook.list().forEach((row) => {
     console.log(JSON.stringify(row))
