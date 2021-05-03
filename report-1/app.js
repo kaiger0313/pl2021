@@ -61,19 +61,18 @@ contactList.forEach((row) => {
 })
 console.log('After Initial Create')
 listConsole()
-create({ name: 'cskim', email: 'cskim@hufs.ac.kr', phone: '031-330-4365' })
-create({ name: 'cskim', email: 'cskim@hufs-gsuite.kr', phone: '010-111-1234' })
-console.log('After add 2 cskim ')
+create({ name: '201604147, 송호성', email: 'kaiger0313@naver.com', phone: '010-2345-1004' })
+console.log('After add 1 201604147, 송호성 ')
 listConsole()
 
-read({ name: 'cskim' })
+read({ name: '201604147, 송호성' })
 
-update({ name: 'cskim' }, { phone: '010-555-5555' })
-console.log('After Update cskim')
+update({ name: '201604147, 송호성' }, { phone: '010-2345-1004' })
+console.log('After Update 201604147, 송호성')
 listConsole()
 
-remove({ name: 'cskim' })
-console.log('After Remove cskim')
+remove({ name: '201604147, 송호성' })
+console.log('After Remove 201604147, 송호성')
 listConsole()
 
 list()
