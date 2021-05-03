@@ -27,13 +27,9 @@ function read(keyObj) {
 
 function update(keyObj, valueObj) {
   const founds = CONTACT_DB.filter((row) => row.name === keyObj.name)
-  const founds = CONTACT_DB.filter((row) => row.email === keyObj.email)
-  const founds = CONTACT_DB.filter((row) => row.phone === keyObj.phone)
   let updMember = founds && founds.length > 0 ? founds[0] : null
   if (!updMember) return
   const newDB = CONTACT_DB.filter((row) => row.name !== keyObj.name)
-  const newDB = CONTACT_DB.filter((row) => row.email !== keyObj.email)
-  const newDB = CONTACT_DB.filter((row) => row.phone !== keyObj.phone)
   updMember = { ...updMember, ...valueObj }
   console.log(updMember)
   CONTACT_DB = [...newDB, updMember]
@@ -41,8 +37,6 @@ function update(keyObj, valueObj) {
 
 function remove(keyObj) {
   const newDB = CONTACT_DB.filter((row) => row.name !== keyObj.name)
-  const newDB = CONTACT_DB.filter((row) => row.email !== keyObj.email)
-  const newDB = CONTACT_DB.filter((row) => row.phone !== keyObj.phone)
   CONTACT_DB = [...newDB]
 }
 
