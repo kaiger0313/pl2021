@@ -8,7 +8,7 @@ class FiveCards extends Comparable {
     cards.forEach((card) => {
       this.fiveCards.push(card)
     })
-    FiveCards.reorder()
+    //FiveCards.reorder()
   }
 
   compareTo(right) {

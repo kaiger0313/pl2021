@@ -21,4 +21,9 @@ for (let s = Card.CLUB; s <= Card.SPADE; s++) {
     deck.push(new Card(s, r))
   }
 }
+console.log('---init---')
 printList(deck)
+console.log('---sorted---')
+printList(deck.sort())
+console.log('---sorted rank compare---')
+printList(deck.sort(Card.compare))

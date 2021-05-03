@@ -67,6 +67,16 @@ class Card extends Comparable {
 
     return diff
   }
+  static compare(left, right) {
+    let lrank = left.rank
+    let rrank = right.rank
+    if (lrank === Card.ACE) lrank = Card.KING + 1
+    if (rrank === Card.ACE) rrank = Card.KING + 1
+
+    let diff = lrank - rrank
+
+    return diff
+  }
 }
 
 module.exports = Card
